@@ -1,7 +1,7 @@
 plugins:
-  mailgun_enabled:
+  mandrill_enabled:
     default: true
     client: true
-  mailgun_api_key:
+  mandrill_api_key:
     client: true
 

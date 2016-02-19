@@ -1,5 +1,5 @@
 en:
   site_settings:
-    mailgun_enabled: "Enable Mailgun plugin"
-    mailgun_api_key: "Mailgun API key"
+    mandrill_enabled: "Enable Mailgun plugin"
+    mandrill_api_key: "Mandrill API key"
 
