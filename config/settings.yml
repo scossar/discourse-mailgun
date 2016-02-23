@@ -2,6 +2,4 @@ plugins:
   mandrill_enabled:
     default: true
     client: true
-  mandrill_api_key:
-    client: true
 
