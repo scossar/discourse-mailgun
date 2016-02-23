@@ -20,6 +20,7 @@ after_initialize do
 
     Mandrill::Engine.routes.draw do
       post '/mime', to: 'incoming_email#handle_mail'
+      head '/mime', to 'incoming_email#validate_url'
     end
 
     Discourse::Application.routes.append do
@@ -34,6 +35,11 @@ after_initialize do
         Email::Receiver.new(mail_string).process
         render text: "email was processed"
       end
+
+      def validate_url
+        render status: 200
+      end
+
 
       def ensure_plugin_active
         if Discourse.disabled_plugin_names.include?(MANDRILL_PLUGIN_NAME)
