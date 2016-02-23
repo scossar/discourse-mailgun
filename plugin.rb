@@ -20,7 +20,7 @@ after_initialize do
 
     Mandrill::Engine.routes.draw do
       post '/mime', to: 'incoming_email#handle_mail'
-      head '/mime', to 'incoming_email#validate_url'
+      head '/mime', to: 'incoming_email#validate_url'
     end
 
     Discourse::Application.routes.append do
