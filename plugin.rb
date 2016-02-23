@@ -30,7 +30,7 @@ after_initialize do
       before_action :ensure_plugin_active
 
       def handle_mail
-        mail_string = params["body-mime"]
+        mail_string = params["msg"]
         Email::Receiver.new(mail_string).process
         render text: "email was processed"
       end
